@@ -1,0 +1,73 @@
+mihir-asus
+    description: Computer
+    width: 64 bits
+    capabilities: smp vsyscall32
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 6226MiB
+     *-cpu
+          product: Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz
+          vendor: Intel Corp.
+          physical id: 1
+          bus info: cpu@0
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp x86-64 constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves flush_l1d arch_capabilities
+     *-pnp00:00
+          product: PnP device PNP0b00
+          physical id: 2
+          capabilities: pnp
+          configuration: driver=rtc_cmos
+     *-scsi
+          physical id: 3
+          logical name: scsi0
+        *-disk:0
+             description: EXT4 volume
+             product: Virtual Disk
+             vendor: Linux
+             physical id: 0.0.0
+             bus info: scsi@0:0.0.0
+             logical name: /dev/sda
+             version: 1.0
+             serial: 3255683f-53a2-4fdf-91cf-b4c1041e2a62
+             size: 256GiB
+             capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+             configuration: ansiversion=5 created=2019-04-10 22:05:05 filesystem=ext4 lastmountpoint=/swap logicalsectorsize=512 modified=2021-04-20 00:35:03 mounted=2021-04-20 00:35:03 sectorsize=4096 state=clean
+        *-disk:1
+             description: EXT4 volume
+             product: Virtual Disk
+             vendor: Linux
+             physical id: 0.0.1
+             bus info: scsi@0:0.0.1
+             logical name: /dev/sdb
+             logical name: /
+             version: 1.0
+             serial: 3255683f-53a2-4fdf-91cf-b4c1041e2a62
+             size: 256GiB
+             capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+             configuration: ansiversion=5 created=2019-04-10 22:05:05 filesystem=ext4 lastmountpoint=/distros logicalsectorsize=512 modified=2021-04-20 00:35:05 mount.fstype=ext4 mount.options=rw,relatime,discard,errors=remount-ro,data=ordered mounted=2021-04-20 00:35:05 sectorsize=4096 state=mounted
+  *-network:0 DISABLED
+       description: Ethernet interface
+       physical id: 1
+       logical name: bond0
+       serial: 72:03:46:22:78:40
+       capabilities: ethernet physical
+       configuration: autonegotiation=off broadcast=yes driver=bonding driverversion=3.7.1 firmware=2 link=no master=yes multicast=yes
+  *-network:1
+       description: Ethernet interface
+       physical id: 2
+       logical name: eth0
+       serial: 00:15:5d:42:c4:b4
+       size: 10Gbit/s
+       capabilities: ethernet physical
+       configuration: autonegotiation=off broadcast=yes driver=hv_netvsc duplex=full firmware=N/A ip=172.20.14.94 link=yes multicast=yes speed=10Gbit/s
+  *-network:2 DISABLED
+       description: Ethernet interface
+       physical id: 3
+       logical name: dummy0
+       serial: 0e:d6:2e:2e:9d:58
+       capabilities: ethernet physical
+       configuration: broadcast=yes driver=dummy driverversion=1.0
